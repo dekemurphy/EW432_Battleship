@@ -1,5 +1,6 @@
 import pygame
 import colors
+import utilities
 
 NBLOCKS = 11
 
@@ -42,16 +43,47 @@ class GameBoard(pygame.sprite.Sprite):
 
         # Draw row and column header backgrounds
         #   Headers should be 1 block wide/tall and use color [header]
-
+        pygame.draw.rect(self.image, colors.header, (0, 0, self.width, self.y_step))
+        pygame.draw.rect(self.image, colors.header, (0, 0, self.x_step, self.height))
         # Draw grid lines use color [foreground]
+        i = 0
+        while i < 12:
+            pygame.draw.line(self.image, colors.foreground, (self.x_step*i, 0), (self.x_step*i, self.height))
+            pygame.draw.line(self.image, colors.foreground, (0, self.y_step*i), (self.width, self.y_step*i))
+            i += 1
+        pygame.draw.line(self.image, colors.foreground, (self.width-1, 0), (self.width-1, self.height))
+        pygame.draw.line(self.image, colors.foreground, (0, self.height-1), (self.width, self.height-1))
 
         # Draw row labels [A-J] centered in each header block
         #    use color [foreground] and font [
+        letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+        letterCenter = self.y_step*1.5
+
+        for letter in letters:
+            letterText = utilities.create_text(letter, 24, colors.foreground)
+            letterTextRect = letterText.get_rect()
+            letterTextRect.centery = letterCenter
+            letterTextRect.centerx = self.x_step // 2
+            self.image.blit(letterText, letterTextRect)
+            letterCenter += self.y_step
 
         # Draw column labels [0-9] centered in each header block
         #    use color [foreground]
+        numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        k = 0
+        numberCenter = self.x_step * 1.5
+
+        for number in numbers:
+            numberText = utilities.create_text(number, 24, colors.foreground)
+            numberTextRect = numberText.get_rect()
+            numberTextRect.centerx = numberCenter
+            numberTextRect.centery = self.y_step // 2
+            self.image.blit(numberText, numberTextRect)
+            numberCenter += self.x_step
 
         # Draw border around the board use color [foreground]
+
+        # Accidentally did this part when I added the lines before I saw this section
 
         # --------- END YOUR CODE ------------
 

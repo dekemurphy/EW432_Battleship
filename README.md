@@ -1,5 +1,5 @@
 # EW432 Battleship Game
 
-## author
+## Deke Murphy
 
 *your custom description here*
