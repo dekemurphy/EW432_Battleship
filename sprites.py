@@ -28,7 +28,7 @@ sprites.append(ship_top)
 # --------- BEGIN YOUR CODE ----------
 
 # ---ship_left (30x30)---
-
+ship_left = pygame.Surface((30,30))
 # ---ship_bottom (30x30)---
 
 # ---ship_right (30x30)---

@@ -4,7 +4,6 @@ import sys
 
 import colors
 import sprites
-import utilities
 import human
 from game_board import GameBoard
 import utilities
