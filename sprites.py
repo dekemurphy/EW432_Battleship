@@ -29,44 +29,24 @@ sprites.append(ship_top)
 
 # ---ship_left (30x30)---
 ship_left = pygame.Surface((30,30))
-ship_left.blit(sprite_sheet, (0, 0), pygame.Rect(31, 0, 30, 30))
-sprites.append(ship_left)
 # ---ship_bottom (30x30)---
-ship_bottom = pygame.Surface((30,30))
-ship_bottom.blit(sprite_sheet, (0, 0), pygame.Rect(62, 0, 30, 30))
-sprites.append(ship_bottom)
+
 # ---ship_right (30x30)---
-ship_right = pygame.Surface((30,30))
-ship_right.blit(sprite_sheet, (0, 0), pygame.Rect(93, 0, 30, 30))
-sprites.append(ship_right)
+
 # ---ship_horizontal (30x30)---
-ship_horizontal = pygame.Surface((30,30))
-ship_horizontal.blit(sprite_sheet, (0, 0), pygame.Rect(0, 31, 30, 30))
-sprites.append(ship_horizontal)
+
 # ---ship_vertical (30x30)---
-ship_vertical = pygame.Surface((30,30))
-ship_vertical.blit(sprite_sheet, (0, 0), pygame.Rect(31, 31, 30, 30))
-sprites.append(ship_vertical)
+
 # ---hit (30x30)---
-hit = pygame.Surface((30,30))
-hit.blit(sprite_sheet, (0, 0), pygame.Rect(62, 31, 30, 30))
-sprites.append(hit)
+
 # ---miss (30x30)---
-miss = pygame.Surface((30,30))
-miss.blit(sprite_sheet, (0, 0), pygame.Rect(93, 31, 30, 30))
-sprites.append(miss)
+
 # ---ship_sunk (30x30)---
-ship_sunk = pygame.Surface((30,30))
-ship_sunk.blit(sprite_sheet, (0, 0), pygame.Rect(0, 62, 30, 30))
-sprites.append(ship_sunk)
+
 # ---turn (40x20)---
-turn = pygame.Surface((40,20))
-turn.blit(sprite_sheet, (0, 0), pygame.Rect(31, 62, 40, 20))
-sprites.append(turn)
+
 # ---msg_box (250x122)---
-msg_box = pygame.Surface((250,122))
-msg_box.blit(sprite_sheet, (0, 0), pygame.Rect(93, 0, 250, 122))
-sprites.append(msg_box)
+
 # --------- END YOUR CODE ------------
 
 
