@@ -49,5 +49,21 @@ class Ship:
         """
 
         # --------- BEGIN YOUR CODE ----------
+        if self.is_vertical is True:
+            for i in range(self.length):
+                if i is 0:
+                    board.draw(sprites.ship_top,(self.row + i, self.col))
+                if i is (self.length - 1):
+                    board.draw(sprites.ship_bottom, (self.row + i, self.col))
+                else:
+                    board.draw(sprites.ship_vertical, (self.row + i, self.col))
+        if self.is_vertical is False:
+            for i in range(self.length):
+                if i is 0:
+                    board.draw(sprites.ship_left,(self.row, self.col + i))
+                if i is (self.length - 1):
+                    board.draw(sprites.ship_right, (self.row, self.col + i))
+                else:
+                    board.draw(sprites.ship_horizontal, (self.row, self.col + i))
 
         # --------- END YOUR CODE ----------
